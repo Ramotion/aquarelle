@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+
+<script src="http://threejs.org/build/three.js"></script>
+
+<script src="../Aquarelle.js"></script>
+
+<script src="http://threejs.org/examples/js/postprocessing/EffectComposer.js"></script>
+
+<script src="http://threejs.org/examples/js/postprocessing/ClearPass.js"></script>
+<script src="../AquarellePass.js"></script>
+<script src="http://threejs.org/examples/js/postprocessing/ShaderPass.js"></script>
+<script src="http://threejs.org/examples/js/shaders/CopyShader.js"></script>
+
+<script src="http://bl.ocks.org/mbostock/raw/4241134/d3.geom.contour.min.js"></script>
+
+<style>
+
+    html {
+        height: 100%;
+    }
+    body {
+        height: 2000px;
+        margin: 0;
+    }
+    div {
+        -webkit-align-items: center;
+        align-items: center;
+        display: -webkit-flex;
+        display: flex;
+        height: 100vh;
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+    canvas {
+        left: 50%;
+        max-height: 100vh;
+        max-width: 700px;
+        position: fixed;
+        top: 50%;
+    }
+</style>
+
+<div>Scroll to up &uarr;</div>
+
+<script>
+
+    var aquarelle = new Aquarelle('splash.png', 'mask.png', {
+        autoplay: false,
+        loop: false
+    });
+
+    function scrollReset() {
+        var body = document.body;
+        aquarelle.progress = body.scrollTop / (body.scrollHeight - window.innerHeight);
+        aquarelle.reset();
+    }
+
+    aquarelle.addEventListener('created', function() {
+        var body = document.body;
+        var canvas = this.getCanvas();
+
+        canvas.removeAttribute('style');
+        body.appendChild(canvas);
+
+        scrollReset();
+    });
+    aquarelle.addEventListener('changed', function() {
+        var canvas = this.getCanvas();
+
+        canvas.style.webkitFilter = 'blur(' + this.transitionInRange(0, 8, 3000) + 'px)';
+//        canvas.style.opacity = this.transitionInRange(1, 0, 7000);
+        canvas.style.webkitTransform = canvas.style.transform = 'translate(-50%, -50%) scale(' + this.transitionInRange(.75, 1) + ')';
+    });
+    document.addEventListener('DOMContentLoaded', scrollReset);
+    window.addEventListener('scroll', scrollReset);
+    window.addEventListener('resize', scrollReset);
+
+</script>
+</body>
+</html>
