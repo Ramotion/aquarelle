@@ -2,7 +2,7 @@
 
 
 [shot on dribbble:](https://dribbble.com/shots/2781510-Web-Transition-Effect)
-![preview](https://d13yacurqjgara.cloudfront.net/users/25514/screenshots/2781510/web__transition__effect_ramotion.gif)
+![preview](./Screenshots/web__transition__effect_ramotion.gif)
 
 ## Browser support
 
