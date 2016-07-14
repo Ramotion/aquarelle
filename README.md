@@ -64,7 +64,7 @@
 | completed | triggered before latest frame is rendered
 | started | triggered before animation is started
 | played | triggered after animation is started
-| paused | triggered before pause of anumation
+| paused | triggered before pause of animation
 | stopped | triggered before reset of animation
 
 ### Methods
@@ -109,5 +109,5 @@ See [LICENSE](./LICENSE) for details.
 
 
 ## About
-The project maintained by [app development agency](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle) [Ramotion Inc.](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle)
+This project is maintained by [app development agency](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle) [Ramotion Inc.](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle)
 See our other [open-source projects](https://github.com/ramotion) or [hire](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle) us to design, develop, and grow your product.
