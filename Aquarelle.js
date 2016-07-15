@@ -18,6 +18,7 @@ var Aquarelle = (function(stack, lastTime) {
             self.mask.img.onload = function() {
                 self.drawMaskImage();
             };
+            self.mask.crossOrigin = 'Anonymous';
             self.mask.img.src = mask;
         } else
         if(mask.nodeName && mask.src) {
@@ -25,6 +26,7 @@ var Aquarelle = (function(stack, lastTime) {
             self.drawMaskImage();
         }
 
+        THREE.ImageUtils.crossOrigin = '';
         new THREE.TextureLoader().load(texture && (typeof texture === 'string' ? texture : texture.nodeName && texture.src) || '', function(texture) {
             self.texture = texture;
             texture.minFilter = THREE.LinearFilter;
@@ -231,7 +233,7 @@ var Aquarelle = (function(stack, lastTime) {
 
             var isPaused = this.isPaused;
             this.stop();
-            this.options.loop && isPaused || this.start();
+            this.options.loop && !isPaused && this.start();
         }
     };
 

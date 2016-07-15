@@ -30,7 +30,7 @@ Then insert in your html:
 <script src="bower_components/three.js/examples/js/postprocessing/ShaderPass.js"></script>
 <script src="bower_components/three.js/examples/js/shaders/CopyShader.js"></script>
 
-<script src="http://bl.ocks.org/mbostock/raw/4241134/d3.geom.contour.min.js"></script>
+<script src="https://bl.ocks.org/mbostock/raw/4241134/d3.geom.contour.min.js"></script>
 ```
 
 
