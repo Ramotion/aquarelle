@@ -1,3 +1,6 @@
+language: node_js
+before_script:
+  - npm install -g bower
 script:
   - bash ./deploy-to-gh-pages.sh
 env:
