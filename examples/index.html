@@ -132,7 +132,7 @@
     var fade = document.querySelector('.fade');
     var topNav = document.querySelector('.top');
     var title = document.querySelector('.title');
-    var icons = document.querySelectorAll('.icon');
+    var icons = Array.prototype.slice(document.querySelectorAll('.icon'));
 
     var image = document.getElementsByTagName('img')[0];
     var aquarelle = new Aquarelle(image, 'img/mask.png', {
