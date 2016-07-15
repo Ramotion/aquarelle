@@ -14,17 +14,21 @@
 
 ## Installation
 
+`bower install aquarelle`
+
+Then insert in your html:
+
 ```html
-<script src="http://threejs.org/build/three.js"></script>
+<script src="bower_components/three.js/build/three.js"></script>
 
-<script src="Aquarelle.js"></script>
+<script src="bower_components/aquarelle/Aquarelle.js"></script>
 
-<script src="http://threejs.org/examples/js/postprocessing/EffectComposer.js"></script>
+<script src="bower_components/three.js/examples/js/postprocessing/EffectComposer.js"></script>
 
-<script src="http://threejs.org/examples/js/postprocessing/ClearPass.js"></script>
-<script src="AquarellePass.js"></script>
-<script src="http://threejs.org/examples/js/postprocessing/ShaderPass.js"></script>
-<script src="http://threejs.org/examples/js/shaders/CopyShader.js"></script>
+<script src="bower_components/three.js/examples/js/postprocessing/ClearPass.js"></script>
+<script src="bower_components/aquarelle/AquarellePass.js"></script>
+<script src="bower_components/three.js/examples/js/postprocessing/ShaderPass.js"></script>
+<script src="bower_components/three.js/examples/js/shaders/CopyShader.js"></script>
 
 <script src="http://bl.ocks.org/mbostock/raw/4241134/d3.geom.contour.min.js"></script>
 ```
