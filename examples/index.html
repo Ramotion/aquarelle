@@ -6,23 +6,23 @@
 </head>
 <body>
 
-<script src="http://threejs.org/build/three.js"></script>
+<script src="bower_components/three.js/build/three.js"></script>
 
-<script src="../Aquarelle.js"></script>
+<script src="bower_components/aquarelle/Aquarelle.js"></script>
 
-<script src="http://threejs.org/examples/js/postprocessing/EffectComposer.js"></script>
+<script src="bower_components/three.js/examples/js/postprocessing/EffectComposer.js"></script>
 
-<script src="http://threejs.org/examples/js/postprocessing/ClearPass.js"></script>
-<script src="../AquarellePass.js"></script>
-<script src="http://threejs.org/examples/js/postprocessing/ShaderPass.js"></script>
-<script src="http://threejs.org/examples/js/shaders/CopyShader.js"></script>
+<script src="bower_components/three.js/examples/js/postprocessing/ClearPass.js"></script>
+<script src="bower_components/aquarelle/AquarellePass.js"></script>
+<script src="bower_components/three.js/examples/js/postprocessing/ShaderPass.js"></script>
+<script src="bower_components/three.js/examples/js/shaders/CopyShader.js"></script>
 
 <script src="http://bl.ocks.org/mbostock/raw/4241134/d3.geom.contour.min.js"></script>
 
 <style>
 
     html {
-        background-image: url(bg.png);
+        background-image: url(img/bg.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -56,7 +56,7 @@
         top: 50%;
     }
     .logo {
-        background-image: url(logo.png);
+        background-image: url(img/logo.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -67,7 +67,7 @@
         width: 29px;
     }
     .menu {
-        background-image: url(top_menu.png);
+        background-image: url(img/top_menu.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -78,7 +78,7 @@
         width: 239px;
     }
     .title {
-        background-image: url(title.png);
+        background-image: url(img/title.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -114,16 +114,16 @@
 </style>
 
 <div class="fade">
-    <img src="splash.png">
+    <img src="img/splash.png">
     <div class="top">
         <div class="logo"></div>
         <div class="menu"></div>
     </div>
     <div class="title"></div>
     <div class="buttons">
-        <div class="icon" style="background-image: url(icon01.png);"></div>
-        <div class="icon" style="background-image: url(icon02.png);"></div>
-        <div class="icon" style="background-image: url(icon03.png);"></div>
+        <div class="icon" style="background-image: url(img/icon01.png);"></div>
+        <div class="icon" style="background-image: url(img/icon02.png);"></div>
+        <div class="icon" style="background-image: url(img/icon03.png);"></div>
     </div>
 </div>
 
@@ -135,7 +135,7 @@
     var icons = document.querySelectorAll('.icon');
 
     var image = document.getElementsByTagName('img')[0];
-    var aquarelle = new Aquarelle(image, 'mask.png', {
+    var aquarelle = new Aquarelle(image, 'img/mask.png', {
         autoplay: true,
         loop: true
     });
