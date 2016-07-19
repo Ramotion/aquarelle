@@ -1,7 +1,7 @@
-var d3 = window.d3 || {};
-d3.geom = d3.geom || {};
+(function(global, stack, lastTime) {
+    var d3 = global.d3 || {};
+    d3.geom = d3.geom || {};
 
-var Aquarelle = (function(stack, lastTime) {
     function Aquarelle(texture, mask, options) {
         var self = this;
 
@@ -115,20 +115,21 @@ var Aquarelle = (function(stack, lastTime) {
         if(mask.offset) {
             mask.ctx.globalCompositeOperation = 'source-' + (mask.offset < 0 ? 'out' : 'over');
 
-            mask.ctx.beginPath();
-            mask.points.forEach(function(point, index) {
-                mask.ctx[index ? 'lineTo' : 'moveTo'](point[0], point[1]);
-            });
-            mask.ctx.closePath();
+            this.pathPoints();
             mask.ctx.stroke();
         }
+
+        this.pathPoints();
+        mask.ctx.fill();
+    };
+    Aquarelle.prototype.pathPoints = function() {
+        var mask = this.mask || {};
 
         mask.ctx.beginPath();
         mask.points.forEach(function(point, index) {
             mask.ctx[index ? 'lineTo' : 'moveTo'](point[0], point[1]);
         });
         mask.ctx.closePath();
-        mask.ctx.fill();
     };
 
     Aquarelle.prototype.direction = 1;
@@ -178,7 +179,9 @@ var Aquarelle = (function(stack, lastTime) {
 
         this.isPaused = true;
 
-        this.isInitialized && this.dispatchEvent(this.getEventObject('paused'));
+        if(this.isInitialized) {
+            this.dispatchEvent(this.getEventObject('paused'));
+        }
     };
     Aquarelle.prototype.play = function() {
         if(!this.isPaused) {
@@ -190,7 +193,7 @@ var Aquarelle = (function(stack, lastTime) {
         this.dispatchEvent(this.getEventObject('played'));
     };
     Aquarelle.prototype.stop = function() {
-        if(this.progress == +(this.direction >= 0) && this.isPaused) {
+        if(this.progress === +(this.direction >= 0) && this.isPaused) {
             return;
         }
 
@@ -198,10 +201,12 @@ var Aquarelle = (function(stack, lastTime) {
 
         this.pause();
 
-        this.isInitialized && this.dispatchEvent(this.getEventObject('stopped'));
+        if(this.isInitialized) {
+            this.dispatchEvent(this.getEventObject('stopped'));
+        }
     };
     Aquarelle.prototype.start = function() {
-        if(this.progress == +(this.direction < 0) && !this.isPaused) {
+        if(this.progress === +(this.direction < 0) && !this.isPaused) {
             return;
         }
 
@@ -233,7 +238,9 @@ var Aquarelle = (function(stack, lastTime) {
 
             var isPaused = this.isPaused;
             this.stop();
-            this.options.loop && !isPaused && this.start();
+        }
+        if(this.isComplete() && this.options.loop && !isPaused) {
+            this.start();
         }
     };
 
@@ -268,7 +275,7 @@ var Aquarelle = (function(stack, lastTime) {
         duration: 8000
     };
 
-    +function() {
+    function frame() {
         var time = Date.now();
         var deltaTime = time - lastTime;
 
@@ -278,8 +285,9 @@ var Aquarelle = (function(stack, lastTime) {
             item.render(deltaTime / 1000);
         });
 
-        requestAnimationFrame(arguments.callee);
-    }();
+        requestAnimationFrame(frame);
+    }
+    frame();
 
-    return Aquarelle;
-})([], Date.now());
+    global.Aquarelle = Aquarelle;
+})(window, [], Date.now());
