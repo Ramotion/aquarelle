@@ -1,9 +1,9 @@
-;(function() {
+var d3 = window.d3 || {};
+d3.geom = d3.geom || {};
+
+(function() {
     var stack = [];
     var lastTime = Date.now();
-
-    var d3 = window.d3 || {};
-    d3.geom = d3.geom || {};
 
     function Aquarelle(texture, mask, options) {
         var self = this;
