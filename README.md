@@ -1,4 +1,7 @@
 # Aquarelle
+[![Bower](https://img.shields.io/bower/v/aquarelle.svg)]()
+[![Twitter](https://img.shields.io/badge/Twitter-@Ramotion-blue.svg?style=flat)](http://twitter.com/Ramotion)
+[![Travis](https://img.shields.io/travis/Ramotion/animated-tab-bar.svg)](https://travis-ci.org/Ramotion/aquarelle)
 
 
 [shot on dribbble:](https://dribbble.com/shots/2781510-Web-Transition-Effect)
