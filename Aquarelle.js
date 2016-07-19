@@ -1,5 +1,8 @@
-(function(global, stack, lastTime) {
-    var d3 = global.d3 || {};
+(function() {
+    var stack = [];
+    var lastTime = Date.now();
+
+    var d3 = window.d3 || {};
     d3.geom = d3.geom || {};
 
     function Aquarelle(texture, mask, options) {
@@ -289,5 +292,5 @@
     }
     frame();
 
-    global.Aquarelle = Aquarelle;
-})(window, [], Date.now());
+    window.Aquarelle = Aquarelle;
+})();
