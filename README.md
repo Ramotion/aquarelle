@@ -1,12 +1,16 @@
-[![Header](./header.png)](https://ramotion.com)
+[![Header](./header.png)](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle)
 
 # Aquarelle
-
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a2d54fa890b84f538be1bc9349dc5121)](https://www.codacy.com/app/juri-v/aquarelle?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Ramotion/aquarelle&amp;utm_campaign=Badge_Grade)
 [![Bower](https://img.shields.io/bower/v/aquarelle.svg)]()
 [![Twitter](https://img.shields.io/badge/Twitter-@Ramotion-blue.svg?style=flat)](http://twitter.com/Ramotion)
 [![Travis](https://img.shields.io/travis/Ramotion/animated-tab-bar.svg)](https://travis-ci.org/Ramotion/aquarelle)
+
 [![preview](./Screenshots/web__transition__effect_ramotion.gif)](https://ramotion.github.io/aquarelle/)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a2d54fa890b84f538be1bc9349dc5121)](https://www.codacy.com/app/juri-v/aquarelle?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Ramotion/aquarelle&amp;utm_campaign=Badge_Grade)
+
+## About
+This project is maintained by [app development agency](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle) [Ramotion Inc.](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle)
+See our other [open-source projects](https://github.com/ramotion) or [hire](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle) us to design, develop, and grow your product.
 
 ## Browser support
 
@@ -118,11 +122,6 @@ aquarelle.removeEventListener('created', listener);
 
 Aquarelle is released under the MIT license.
 See [LICENSE](./LICENSE) for details.
-
-
-## About
-This project is maintained by [app development agency](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle) [Ramotion Inc.](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle)
-See our other [open-source projects](https://github.com/ramotion) or [hire](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle) us to design, develop, and grow your product.
 
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=https://github.com/ramotion/aquarelle)
 [![Twitter Follow](https://img.shields.io/twitter/follow/ramotion.svg?style=social)](https://twitter.com/ramotion)
