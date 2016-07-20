@@ -1,11 +1,12 @@
+[![Header](./header.png)](https://ramotion.com)
+
 # Aquarelle
+
 [![Bower](https://img.shields.io/bower/v/aquarelle.svg)]()
 [![Twitter](https://img.shields.io/badge/Twitter-@Ramotion-blue.svg?style=flat)](http://twitter.com/Ramotion)
 [![Travis](https://img.shields.io/travis/Ramotion/animated-tab-bar.svg)](https://travis-ci.org/Ramotion/aquarelle)
-
-
-[shot on dribbble:](https://dribbble.com/shots/2781510-Web-Transition-Effect)
-![preview](./Screenshots/web__transition__effect_ramotion.gif)
+[![preview](./Screenshots/web__transition__effect_ramotion.gif)](https://ramotion.github.io/aquarelle/)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a2d54fa890b84f538be1bc9349dc5121)](https://www.codacy.com/app/juri-v/aquarelle?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Ramotion/aquarelle&amp;utm_campaign=Badge_Grade)
 
 ## Browser support
 
@@ -92,7 +93,7 @@ Then insert in your html:
 
 ## Usage
 
-##### Initialization
+≈
 
 ```javascript
 var aquarelle = new Aquarelle(textureImage, maskImage[, options]);
@@ -107,7 +108,11 @@ aquarelle.addEventListener('created', listener);
 
 aquarelle.removeEventListener('created', listener);
 ```
+##### Demos
 
+[Static demo](http://ramotion.github.io/aquarelle)
+
+[Dynamic demo](https://ramotion.github.io/aquarelle/example_scroll.html)
 
 ## Licence
 
@@ -118,3 +123,6 @@ See [LICENSE](./LICENSE) for details.
 ## About
 This project is maintained by [app development agency](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle) [Ramotion Inc.](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle)
 See our other [open-source projects](https://github.com/ramotion) or [hire](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle) us to design, develop, and grow your product.
+
+[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=https://github.com/ramotion/aquarelle)
+[![Twitter Follow](https://img.shields.io/twitter/follow/ramotion.svg?style=social)](https://twitter.com/ramotion)
