@@ -1,3 +1,5 @@
+var THREE = window.THREE || {};
+
 var d3 = window.d3 || {};
 d3.geom = d3.geom || {};
 
@@ -168,7 +170,7 @@ d3.geom = d3.geom || {};
     };
 
     Aquarelle.prototype.transitionInRange = function(startValue, endValue, startTime, endTime) {
-        return this.transitionForProgressInRange(this.clampedProgress(this.progressForValueInRange(this.progress, (startTime || 0) / this.options.duration, (endTime || this.options.duration) / this.options.duration)), startValue, endValue)
+        return this.transitionForProgressInRange(this.clampedProgress(this.progressForValueInRange(this.progress, (startTime || 0) / this.options.duration, (endTime || this.options.duration) / this.options.duration)), startValue, endValue);
     };
 
     Aquarelle.prototype.isComplete = function() {
@@ -293,4 +295,4 @@ d3.geom = d3.geom || {};
     frame();
 
     window.Aquarelle = Aquarelle;
-})();
+}());

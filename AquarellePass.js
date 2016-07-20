@@ -1,3 +1,5 @@
+var THREE = window.THREE || {};
+
 THREE.AquarellePass = function(texture, mask) {
     THREE.Pass.call(this);
 
