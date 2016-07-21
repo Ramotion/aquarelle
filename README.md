@@ -6,11 +6,12 @@
 [![Twitter](https://img.shields.io/badge/Twitter-@Ramotion-blue.svg?style=flat)](http://twitter.com/Ramotion)
 [![Travis](https://img.shields.io/travis/Ramotion/animated-tab-bar.svg)](https://travis-ci.org/Ramotion/aquarelle)
 
-[![preview](./Screenshots/web__transition__effect_ramotion.gif)](https://ramotion.github.io/aquarelle/)
-
 ## About
 This project is maintained by [app development agency](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle) [Ramotion Inc.](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle)
 See our other [open-source projects](https://github.com/ramotion) or [hire](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle) us to design, develop, and grow your product.
+
+[![preview](./Screenshots/web__transition__effect_ramotion.gif)](https://ramotion.github.io/aquarelle/)
+
 
 ## Browser support
 
