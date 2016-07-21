@@ -1,4 +1,4 @@
-[![Header](./header.png)](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle)
+[![Header](./header.png)](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle-logo)
 
 # Aquarelle
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a2d54fa890b84f538be1bc9349dc5121)](https://www.codacy.com/app/juri-v/aquarelle?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Ramotion/aquarelle&amp;utm_campaign=Badge_Grade)
@@ -8,9 +8,10 @@
 
 [![preview](./Screenshots/web__transition__effect_ramotion.gif)](https://ramotion.github.io/aquarelle/)
 
+
 ## About
-This project is maintained by [app development agency](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle) [Ramotion Inc.](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle)
-See our other [open-source projects](https://github.com/ramotion) or [hire](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle) us to design, develop, and grow your product.
+Ramotion specializes in building dedicated engineering teams and developing custom software.<br> [Contact our team](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle-contact-us) and we’ll help you work with the best engineers from Eastern Europe.
+
 
 ## Browser support
 
