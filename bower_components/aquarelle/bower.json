@@ -1,0 +1,29 @@
+{
+  "name": "aquarelle",
+  "main": "aquarelle.js",
+  "homepage": "https://ramotion.com",
+  "authors": [
+    "juri.v@ramotion.com"
+  ],
+  "description": "watercolor animation",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "aquarelle",
+    "watercolor",
+    "animation",
+    "transition"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "three.js": "threejs#*"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "examples",
+  "homepage": "https://github.com/Ramotion/aquarelle",
+  "authors": [
+    "yury <yury.p@ramotion.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "aquarelle": "*"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components"
+  ]
+}

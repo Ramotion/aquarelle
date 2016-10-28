@@ -1,0 +1,35 @@
+{
+  "name": "three.js",
+  "homepage": "http://threejs.org/",
+  "description": "JavaScript 3D library",
+  "main": "build/three.js",
+  "keywords": [
+    "three",
+    "threejs",
+    "three.js",
+    "3D",
+    "webgl"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "*.md",
+    "/docs",
+    "/editor",
+    "/examples/*",
+    "!/examples/js",
+    "/src",
+    "/test",
+    "/utils",
+    "/LICENSE"
+  ],
+  "_release": "c1454a1066",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c1454a1066022eeecbe1552c1c9d81670012bacb"
+  },
+  "_source": "https://github.com/mrdoob/three.js.git",
+  "_target": "*",
+  "_originalSource": "threejs"
+}

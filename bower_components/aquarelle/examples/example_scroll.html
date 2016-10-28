@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+
+<script src="bower_components/three.js/build/three.js"></script>
+
+<script src="bower_components/aquarelle/Aquarelle.js"></script>
+
+<script src="bower_components/three.js/examples/js/postprocessing/EffectComposer.js"></script>
+
+<script src="bower_components/three.js/examples/js/postprocessing/ClearPass.js"></script>
+<script src="bower_components/aquarelle/AquarellePass.js"></script>
+<script src="bower_components/three.js/examples/js/postprocessing/ShaderPass.js"></script>
+<script src="bower_components/three.js/examples/js/shaders/CopyShader.js"></script>
+
+<script src="https://bl.ocks.org/mbostock/raw/4241134/d3.geom.contour.min.js"></script>
+
+<style>
+
+    html {
+        height: 100%;
+    }
+    body {
+        height: 2000px;
+        margin: 0;
+    }
+    div {
+        -webkit-align-items: center;
+        align-items: center;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        font-family: Tahoma, Verdana, Segoe, sans-serif;
+        font-size: 12px;
+        height: 100vh;
+        -webkit-justify-content: center;
+        justify-content: center;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+    }
+    svg {
+        fill: none;
+        margin-bottom: 4px;
+        stroke: #000;
+        stroke-width: 2;
+        width: 34px;
+    }
+    canvas {
+        left: 50%;
+        max-height: 100vh;
+        max-width: 900px;
+        position: fixed;
+        top: 50%;
+    }
+</style>
+
+<div>
+    <svg viewBox="0 0 62.2 96.8">
+        <path d="M31.1,88.8L31.1,88.8c-11.3,0-20.6-9.3-20.6-20.6V28.6C10.5,17.3,19.8,8,31.1,8h0c11.3,0,20.6,9.3,20.6,20.6v39.5C51.8,79.5,42.5,88.8,31.1,88.8z"/>
+        <path d="M31.1,39.2L31.1,39.2c-1.7,0-3-1.4-3-3V23.8c0-1.7,1.4-3,3-3h0c1.7,0,3,1.4,3,3v12.3C34.2,37.8,32.8,39.2,31.1,39.2z">
+            <animate attributeName="stroke-opacity" from="0" to="1" dur="1s" repeatCount="indefinite"/>
+        </path>
+    </svg>
+    <span>Scroll down</span>
+</div>
+
+<script>
+
+    var text = document.getElementsByTagName('div')[0];
+    var aquarelle = new Aquarelle('img/jobs.jpg', 'img/mask.png', {
+        toOffset: 50
+    });
+
+    function scrollReset() {
+        var body = document.body;
+        aquarelle.progress = body.scrollTop / (body.scrollHeight - window.innerHeight);
+        aquarelle.reset();
+    }
+
+    aquarelle.addEventListener('created', function() {
+        var body = document.body;
+        var canvas = this.getCanvas();
+
+        canvas.removeAttribute('style');
+        body.appendChild(canvas);
+
+        scrollReset();
+    });
+    aquarelle.addEventListener('changed', function() {
+        document.body.style.webkitFilter = 'blur(' + this.transitionInRange(0, 16, 3000) + 'px)';
+
+        text.style.webkitFilter = 'blur(' + this.transitionInRange(0, 2, 0, 1000) + 'px)';
+        text.style.webkitTransform = text.style.transform = 'scale(' + this.transitionInRange(1, .95, 0, 1000) + ')';
+        text.style.opacity = this.transitionInRange(1, 0, 0, 1000);
+
+        var canvas = this.getCanvas();
+        canvas.style.webkitTransform = canvas.style.transform = 'translate(-50%, -50%) scale(' + this.transitionInRange(.75, 1) + ')';
+    });
+    document.addEventListener('DOMContentLoaded', scrollReset);
+    window.addEventListener('scroll', scrollReset);
+    window.addEventListener('resize', scrollReset);
+
+</script>
+</body>
+</html>

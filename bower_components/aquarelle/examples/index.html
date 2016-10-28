@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+</head>
+<body>
+
+<script src="bower_components/three.js/build/three.js"></script>
+
+<script src="bower_components/aquarelle/Aquarelle.js"></script>
+
+<script src="bower_components/three.js/examples/js/postprocessing/EffectComposer.js"></script>
+
+<script src="bower_components/three.js/examples/js/postprocessing/ClearPass.js"></script>
+<script src="bower_components/aquarelle/AquarellePass.js"></script>
+<script src="bower_components/three.js/examples/js/postprocessing/ShaderPass.js"></script>
+<script src="bower_components/three.js/examples/js/shaders/CopyShader.js"></script>
+
+<script src="https://bl.ocks.org/mbostock/raw/4241134/d3.geom.contour.min.js"></script>
+
+<style>
+
+    html {
+        background-image: url(img/bg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: -webkit-flex;
+        display: flex;
+        height: 100%;
+    }
+
+    body {
+        background-color: #fff;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, .1);
+        margin: 44px 44px 0;
+        position: relative;
+        width: 100%;
+    }
+
+    .fade {
+        opacity: 0;
+    }
+
+    img {
+        display: none;
+    }
+    canvas {
+        left: 50%;
+        max-height: 100%;
+        max-width: 100%;
+        position: absolute;
+        top: 50%;
+    }
+    .logo {
+        background-image: url(img/logo.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 27px;
+        left: 30px;
+        position: absolute;
+        top: 24px;
+        width: 29px;
+    }
+    .menu {
+        background-image: url(img/top_menu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 7px;
+        position: absolute;
+        right: 36px;
+        top: 34px;
+        width: 239px;
+    }
+    .title {
+        background-image: url(img/title.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 38px;
+        left: 50%;
+        margin-left: -124px;
+        margin-top: -19px;
+        position: absolute;
+        top: 50%;
+        width: 248px;
+    }
+
+    .buttons {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        left: 50%;
+        margin-left: -115px;
+        margin-top: 40px;
+        position: absolute;
+        top: 50%;
+        width: 230px;
+    }
+    .icon {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 56px;
+        width: 56px;
+    }
+
+</style>
+
+<div class="fade">
+    <img src="img/splash.png">
+    <div class="top">
+        <div class="logo"></div>
+        <div class="menu"></div>
+    </div>
+    <div class="title"></div>
+    <div class="buttons">
+        <div class="icon" style="background-image: url(img/icon01.png);"></div>
+        <div class="icon" style="background-image: url(img/icon02.png);"></div>
+        <div class="icon" style="background-image: url(img/icon03.png);"></div>
+    </div>
+</div>
+
+<script>
+
+    var fade = document.querySelector('.fade');
+    var topNav = document.querySelector('.top');
+    var title = document.querySelector('.title');
+    var icons = Array.prototype.slice.call(document.querySelectorAll('.icon'));
+
+    var image = document.getElementsByTagName('img')[0];
+    var aquarelle = new Aquarelle(image, 'img/mask.png', {
+        autoplay: true,
+        loop: true
+    });
+
+    aquarelle.addEventListener('created', function() {
+        var canvas = this.getCanvas();
+        canvas.removeAttribute('style');
+        image.parentNode.insertBefore(canvas, image.nextSibling);
+        image.parentNode.removeChild(image);
+    });
+
+    aquarelle.addEventListener('changed', function(event) {
+        fade.style.opacity = this.transitionInRange(1, 0, 7183, 7933);
+
+        topNav.style.opacity = this.transitionInRange(0, 1, 4330, 5660);
+
+        var canvas = this.getCanvas();
+        canvas.style.webkitFilter = 'blur(' + this.transitionInRange(0, 24, 3000) + 'px)';
+        canvas.style.webkitTransform = canvas.style.transform = 'translate(-50%, -50%) scale(' + this.transitionInRange(.75, 1) + ')';
+
+        title.style.opacity = this.transitionInRange(0, 1, 0, 2016);
+        title.style.webkitTransform = title.style.transform = 'scale(' + this.transitionInRange(.8, 1, 0, 5883) + ')';
+
+        icons.forEach(function(icon) {
+            icon.style.webkitFilter = 'blur(' + event.target.transitionInRange(4, 0, 3433, 4149) + 'px)';
+            icon.style.opacity = event.target.transitionInRange(0, 1, 3433, 4266);
+            icon.style.webkitTransform = icon.style.transform = 'scale(' + event.target.transitionInRange(1.3, 1, 3433, 4400) + ')';
+        });
+    });
+
+</script>
+</body>
+</html>
