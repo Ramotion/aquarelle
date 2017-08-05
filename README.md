@@ -1,4 +1,5 @@
 [![Header](./header.png)](https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle)
+[![preview](./Screenshots/web__transition__effect_ramotion.gif)](https://ramotion.github.io/aquarelle/)
 
 # Aquarelle
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a2d54fa890b84f538be1bc9349dc5121)](https://www.codacy.com/app/juri-v/aquarelle?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Ramotion/aquarelle&amp;utm_campaign=Badge_Grade)
@@ -6,17 +7,17 @@
 [![Twitter](https://img.shields.io/badge/Twitter-@Ramotion-blue.svg?style=flat)](http://twitter.com/Ramotion)
 [![Travis](https://img.shields.io/travis/Ramotion/aquarelle.svg)](https://travis-ci.org/Ramotion/aquarelle)
 
-[![preview](./Screenshots/web__transition__effect_ramotion.gif)](https://ramotion.github.io/aquarelle/)
 
 
 ## About
 This project is maintained by Ramotion, Inc.<br>
-We specialize in the designing and coding of custom UI for Mobile Apps and Websites.<br><br>**Looking for developers for your project?** 
+We specialize in the designing and coding of custom UI for Mobile Apps and Websites.<br>
 
-<a href="https://ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle-contact-us/#Get_in_Touch" > <img src="https://github.com/Ramotion/navigation-stack/raw/master/contact_our_team@2x.png" width="150" height="30"></a>
+**Looking for developers for your project?**<br>
+This project is maintained by Ramotion, Inc. We specialize in the designing and coding of custom UI for Mobile Apps and Websites.
 
-
-
+<a href="https://ramotion.com/?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle-contact-us/#Get_in_Touch"> 
+<img src="https://github.com/ramotion/gliding-collection/raw/master/contact_our_team@2x.png" width="187" height="34"></a> <br>
 
 ## Browser support
 
@@ -127,7 +128,16 @@ aquarelle.removeEventListener('created', listener);
 Aquarelle is released under the MIT license.
 See [LICENSE](./LICENSE) for details.
 
-## Follow Us
+# Get the Showroom App for iOS to give it a try
+Try our UI components in our iOS app. Contact us if interested.
 
+<a href="https://itunes.apple.com/app/apple-store/id1182360240?pt=550053&ct=aquarelle&mt=8" > 
+<img src="https://github.com/ramotion/gliding-collection/raw/master/app_store@2x.png" width="117" height="34"></a>
+<a href="https://ramotion.com/?utm_source=gthb&utm_medium=special&utm_campaign=aquarelle-contact-us/#Get_in_Touch"> 
+<img src="https://github.com/ramotion/gliding-collection/raw/master/contact_our_team@2x.png" width="187" height="34"></a>
+<br>
+<br>
+Follow us for the latest updates 
+<br>
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=https://github.com/ramotion/aquarelle)
 [![Twitter Follow](https://img.shields.io/twitter/follow/ramotion.svg?style=social)](https://twitter.com/ramotion)
