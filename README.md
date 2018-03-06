@@ -140,5 +140,5 @@ Try our UI components in our iOS app. Contact us if interested.
 Follow us for the latest updates 
 <br>
 
-[![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=https://github.com/ramotion/aquarelle)
-[![Twitter](https://img.shields.io/twitter/follow/ramotion.svg?style=social)](http://twitter.com/Ramotion)
+<a href="https://github.com/RamotionDev" >
+<img src="https://i.imgur.com/ziSqeSo.png/" width="156" height="28"></a>
