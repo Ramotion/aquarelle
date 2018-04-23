@@ -6,7 +6,7 @@
 [![Bower](https://img.shields.io/bower/v/aquarelle.svg)]()
 [![Twitter](https://img.shields.io/badge/Twitter-@Ramotion-blue.svg?style=flat)](http://twitter.com/Ramotion)
 [![Travis](https://img.shields.io/travis/Ramotion/aquarelle.svg)](https://travis-ci.org/Ramotion/aquarelle)
-
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/Ramotion)
 
 
 ## About
