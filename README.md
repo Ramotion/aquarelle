@@ -119,9 +119,9 @@ aquarelle.removeEventListener('created', listener);
 ```
 ##### Demos
 
-[Static demo](http://ramotion.github.io/aquarelle)
+[Dynamic demo](http://ramotion.github.io/aquarelle)
 
-[Dynamic demo](https://ramotion.github.io/aquarelle/example_scroll.html)
+[Static demo](https://ramotion.github.io/aquarelle/example_scroll.html)
 
 ## Licence
 
