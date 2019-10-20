@@ -151,7 +151,7 @@ THREE.AquarellePass = function(texture, mask) {
             'vec4 mask = texture2D(Mask, shift);',
 
 
-            'gl_FragColor = vec4(texture.r, texture.g, texture.b, mask.a);',
+            'gl_FragColor = vec4(texture.r, texture.g, texture.b, texture.a*mask.a);',
             '}'
         ].join('\n'),
         transparent: true
@@ -172,6 +172,8 @@ THREE.AquarellePass.prototype = Object.assign(Object.create(THREE.Pass.prototype
     render: function(renderer, writeBuffer, readBuffer) {
         this.quad.material = this.material;
 
-        renderer.render(this.scene, this.camera, readBuffer, this.clear);
+        if (this.clear) renderer.clear();
+        renderer.setRenderTarget(readBuffer);
+        renderer.render(this.scene, this.camera);
     }
 });
