@@ -151,7 +151,7 @@ THREE.AquarellePass = function(texture, mask) {
             'vec4 mask = texture2D(Mask, shift);',
 
 
-            'gl_FragColor = vec4(texture.r, texture.g, texture.b, mask.a);',
+            'gl_FragColor = vec4(texture.r, texture.g, texture.b, texture.a*mask.a);',
             '}'
         ].join('\n'),
         transparent: true
