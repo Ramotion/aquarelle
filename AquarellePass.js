@@ -172,6 +172,8 @@ THREE.AquarellePass.prototype = Object.assign(Object.create(THREE.Pass.prototype
     render: function(renderer, writeBuffer, readBuffer) {
         this.quad.material = this.material;
 
-        renderer.render(this.scene, this.camera, readBuffer, this.clear);
+        if (this.clear) renderer.clear();
+        renderer.setRenderTarget(readBuffer);
+        renderer.render(this.scene, this.camera);
     }
 });
